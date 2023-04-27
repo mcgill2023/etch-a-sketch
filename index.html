@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Etch-A-Sketch</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;700;900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <div class="device">
+    <h1>Etch A Sketch</h1>
+    <p class="mode-description">Click the sketch screen to change color mode</p>
+    <div class="screen-container">
+      <div id="screen" class="screen"></div>
+    </div>
+    <div class="mode">
+      <h2>Color mode: <span class="mode-state">Not active</span></h2>
+    </div>
+    <div class="button-container">
+      <button class="btn black-btn" onclick="getColor('black')">Black</button>
+      <button class="btn rainbow-btn" onclick="getColor('rainbow')">Rainbow</button>
+      <button class="btn erase-btn" onclick="getColor('#dadada')">Eraser</button>
+    </div>
+    <div class="set-board">
+      <button class="btn reset" onclick="reset()">Reset</button>
+      <div class="input-container">
+        <input class="set-size" type="number" placeholder="Size" onchange="setSize(this.value)">
+      </div>
+      <button class="btn">Set Size</button>
+    </div>
+    <p class="error">Must be between 2 and 100 inclusive</p>
+  </div>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
